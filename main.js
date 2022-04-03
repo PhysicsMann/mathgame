@@ -4,7 +4,7 @@ let getRandomNumber = function(start, end){
   return getRandom;
 }
 
-var store;
+var count = 0;
 var smallest;
 var largest;
 var rand;
@@ -35,9 +35,12 @@ document.getElementById("start").onclick = function(){
 
 document.getElementById("yes").onclick = function(){
   if(checkIfSquareNum(rand)){
-    document.getElementById("display2").innerHTML = "Correct";
+    count++;
+    document.getElementById("result").innerHTML = "Correct! Cumulative score = " + count;;
   }else{
+    count = 0;
     alert("Incorrect!");
+    document.getElementById("result").innerHTML = "Incorrect! Cumulative score = " + count;
   }
   rand = getRandomNumber(smallest,largest);
   document.getElementById("display1").innerHTML = rand;
@@ -45,9 +48,12 @@ document.getElementById("yes").onclick = function(){
 
 document.getElementById("no").onclick = function(){
   if(checkIfSquareNum(rand)){
+    count = 0;
     alert("Incorrect!");
+    document.getElementById("result").innerHTML = "Incorrect! Cumulative score = " + count;
   }else{
-    document.getElementById("display2").innerHTML = "Correct";
+    count++;
+    document.getElementById("result").innerHTML = "Correct! Cumulative score = " + count;;
   }
   rand = getRandomNumber(smallest,largest);
   document.getElementById("display1").innerHTML = rand;
