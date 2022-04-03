@@ -2,18 +2,30 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>hello!</title>
+    <title>Square Number Test</title>
+    <style>
+      .back {
+        height: 100px;
+        width: 30%;
+        background-color: powderblue;
+        font-size: 30px;
+        text-align: center;
+        vertical-align: middle;
+      }
+  </style>
   </head>
   <body>
-    <h1 style="text-align:center">A small math game</h1>
+    <h1 style="text-align:center">Square Number Test</h1>
     <h3>
-      Instructions:<br>
-      This game is to train your ability to recognize a square number (e.g. 4, 16, 25, ...)<br>
-      It will flash some random numbers on the screen.
-      But first, you need to input the smallest and largest number of the random numbers.
+        This game is to train your ability to recognize a square number (e.g. 4, 16, 25, ...)
+        <ol>
+          <li>Input the smallest and largest number of the random numbers.</li>
+          <li>Click "Start"</li>
+          <li>A random number will be displayed and you need to click whether if it is a square number</li>
+        </ol>
 
     </h3>
-
+    <hr>
     <div>
       <label for="smallest">Smallest Number</label>
       <input type="number" name="smallest" id="smallest" min="0" required>
@@ -25,14 +37,13 @@
     <div>
       <button id="start">Start</button>
     </div>
-    <div id="display1">
-
+    <div id="display1" class="back">
     </div>
+    <br>
     <button id="yes">Square number</button>
     <button id="no">Not square number</button>
-    <div id="display2">
-
-    </div>
+    <br>
+    <div id="result" class="back"></div>
     <script src="main.js"></script>
   </body>
 
