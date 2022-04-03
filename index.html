@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>hello!</title>
+  </head>
+  <body>
+    <h1 style="text-align:center">A small math game</h1>
+    <h3>
+      Instructions:<br>
+      This game is to train your ability to recognize a square number (e.g. 4, 16, 25, ...)<br>
+      It will flash some random numbers on the screen.
+      But first, you need to input the smallest and largest number of the random numbers.
+
+    </h3>
+
+    <div>
+      <label for="smallest">Smallest Number</label>
+      <input type="number" name="smallest" id="smallest" min="0" required>
+    </div>
+    <div>
+      <label for="largest">Largest Number</label>
+      <input type="number" name="largest" id="largest" min="0" required>
+    </div>
+    <div>
+      <button id="start">Start</button>
+    </div>
+    <div id="display1">
+
+    </div>
+    <button id="yes">Square number</button>
+    <button id="no">Not square number</button>
+    <div id="display2">
+
+    </div>
+    <script src="main.js"></script>
+  </body>
+
+</html>
